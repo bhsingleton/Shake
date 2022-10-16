@@ -1,0 +1,31 @@
+global proc AEshakeTemplate(string $nodeName)
+{
+    
+    editorTemplate -beginScrollLayout;
+        
+        editorTemplate -beginLayout "Shake Attributes" -collapse false;
+			
+			editorTemplate -addControl "envelope";
+			editorTemplate -addControl "weight";
+			editorTemplate -addControl "seed";
+            editorTemplate -addControl "frequency";
+			editorTemplate -addControl "fractal";
+			editorTemplate -addControl "roughness";
+			editorTemplate -addControl "rampIn";
+			editorTemplate -addControl "rampOut";
+			editorTemplate -addControl "strength";
+			editorTemplate -addControl "positive";
+			
+        editorTemplate -endLayout;
+        
+		editorTemplate -suppress "time";
+		editorTemplate -suppress "outputTranslate";
+		editorTemplate -suppress "outputRotate";
+		editorTemplate -suppress "outputScale";
+		
+        AEdependNodeTemplate $nodeName;
+        editorTemplate -addExtraControls;
+        
+    editorTemplate -endScrollLayout;
+    
+}
