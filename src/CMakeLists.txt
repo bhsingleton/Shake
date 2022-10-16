@@ -7,8 +7,8 @@ set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_SOURCE_DIR}/../modul
 set(
 	SOURCE_FILES
 	"pluginMain.cpp"
-	"Perlin.cpp"
-	"Perlin.h"
+	"Noise.cpp"
+	"Noise.h"
 	"ShakeNode.cpp"
 	"ShakeNode.h"
 )
