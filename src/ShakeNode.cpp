@@ -333,6 +333,7 @@ Use this function to define any static attributes.
 
 	CHECK_MSTATUS(fnNumericAttr.setMin(0.0));
 	CHECK_MSTATUS(fnNumericAttr.setMin(1.0));
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".time" attribute
@@ -348,6 +349,7 @@ Use this function to define any static attributes.
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
 	CHECK_MSTATUS(fnNumericAttr.setMin(0));
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".frequency" attribute
@@ -357,6 +359,7 @@ Use this function to define any static attributes.
 	
 	CHECK_MSTATUS(fnNumericAttr.setMin(DBL_MIN));
 	CHECK_MSTATUS(fnNumericAttr.setMin(10.0));
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".fractal" attribute
@@ -364,6 +367,7 @@ Use this function to define any static attributes.
 	Shake::fractal = fnNumericAttr.create("fractal", "f", MFnNumericData::kBoolean, true, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".roughness" attribute
@@ -373,6 +377,7 @@ Use this function to define any static attributes.
 
 	CHECK_MSTATUS(fnNumericAttr.setMin(0.0));
 	CHECK_MSTATUS(fnNumericAttr.setMin(1.0));
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".rampIn" attribute
@@ -380,6 +385,7 @@ Use this function to define any static attributes.
 	Shake::rampIn = fnUnitAttr.create("rampIn", "ri", MFnUnitAttribute::kTime, 0.0, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnUnitAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnUnitAttr.addToCategory(Shake::inputCategory));
 
 	// ".rampOut" attribute
@@ -387,6 +393,7 @@ Use this function to define any static attributes.
 	Shake::rampOut = fnUnitAttr.create("rampOut", "ro", MFnUnitAttribute::kTime, 0.0, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnUnitAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnUnitAttr.addToCategory(Shake::inputCategory));
 
 	// ".strengthX" attribute
@@ -394,6 +401,7 @@ Use this function to define any static attributes.
 	Shake::strengthX = fnNumericAttr.create("strengthX", "stx", MFnNumericData::kDouble, 5.0, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".strengthY" attribute
@@ -401,6 +409,7 @@ Use this function to define any static attributes.
 	Shake::strengthY = fnNumericAttr.create("strengthY", "sty", MFnNumericData::kDouble, 5.0, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".strengthZ" attribute
@@ -408,6 +417,7 @@ Use this function to define any static attributes.
 	Shake::strengthZ = fnNumericAttr.create("strengthZ", "stz", MFnNumericData::kDouble, 5.0, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".strength" attribute
@@ -415,6 +425,7 @@ Use this function to define any static attributes.
 	Shake::strength = fnNumericAttr.create("strength", "st", Shake::strengthX, Shake::strengthY, Shake::strengthZ, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".positiveX" attribute
@@ -422,6 +433,7 @@ Use this function to define any static attributes.
 	Shake::positiveX = fnNumericAttr.create("positiveX", "px", MFnNumericData::kBoolean, false, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".positiveY" attribute
@@ -429,6 +441,7 @@ Use this function to define any static attributes.
 	Shake::positiveY = fnNumericAttr.create("positiveY", "py", MFnNumericData::kBoolean, false, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".positiveZ" attribute
@@ -436,6 +449,7 @@ Use this function to define any static attributes.
 	Shake::positiveZ = fnNumericAttr.create("positiveZ", "pz", MFnNumericData::kBoolean, false, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".positive" attribute
@@ -443,6 +457,7 @@ Use this function to define any static attributes.
 	Shake::positive = fnNumericAttr.create("positive", "p", Shake::positiveX, Shake::positiveY, Shake::positiveZ, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
+	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// Output attributes:
