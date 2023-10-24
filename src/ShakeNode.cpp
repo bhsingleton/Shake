@@ -332,7 +332,7 @@ Use this function to define any static attributes.
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
 	CHECK_MSTATUS(fnNumericAttr.setMin(0.0));
-	CHECK_MSTATUS(fnNumericAttr.setMin(1.0));
+	CHECK_MSTATUS(fnNumericAttr.setMax(1.0));
 	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
