@@ -401,7 +401,7 @@ Use this function to define any static attributes.
 	Shake::strengthX = fnNumericAttr.create("strengthX", "stx", MFnNumericData::kDouble, 5.0, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
-	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
+	CHECK_MSTATUS(fnNumericAttr.setKeyable(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".strengthY" attribute
@@ -409,7 +409,7 @@ Use this function to define any static attributes.
 	Shake::strengthY = fnNumericAttr.create("strengthY", "sty", MFnNumericData::kDouble, 5.0, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
-	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
+	CHECK_MSTATUS(fnNumericAttr.setKeyable(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".strengthZ" attribute
@@ -417,7 +417,7 @@ Use this function to define any static attributes.
 	Shake::strengthZ = fnNumericAttr.create("strengthZ", "stz", MFnNumericData::kDouble, 5.0, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
-	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
+	CHECK_MSTATUS(fnNumericAttr.setKeyable(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".strength" attribute
@@ -425,7 +425,7 @@ Use this function to define any static attributes.
 	Shake::strength = fnNumericAttr.create("strength", "st", Shake::strengthX, Shake::strengthY, Shake::strengthZ, &status);
 	CHECK_MSTATUS_AND_RETURN_IT(status);
 
-	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
+	CHECK_MSTATUS(fnNumericAttr.setKeyable(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".positiveX" attribute

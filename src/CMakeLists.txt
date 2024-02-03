@@ -9,6 +9,8 @@ set(
 	"Noise.cpp"
 	"ShakeNode.h"
 	"ShakeNode.cpp"
+	"ShakeCmd.h"
+	"ShakeCmd.cpp"
 )
 
 set(

@@ -5,6 +5,7 @@
 //
 
 #include "ShakeNode.h"
+#include "ShakeCmd.h"
 #include <maya/MFnPlugin.h>
 
 
@@ -20,6 +21,16 @@ MStatus initializePlugin(MObject obj)
 	{
 
 		status.perror("registerNode");
+		return status;
+
+	}
+
+	status = plugin.registerCommand(COMMAND_NAME, ShakeCmd::creator, ShakeCmd::newSyntax);
+
+	if (!status)
+	{
+
+		status.perror("registerCommand");
 		return status;
 
 	}
@@ -41,6 +52,16 @@ MStatus uninitializePlugin(MObject obj)
 	{
 
 		status.perror("deregisterNode");
+		return status;
+
+	}
+
+	status = plugin.deregisterCommand(COMMAND_NAME);
+
+	if (!status)
+	{
+
+		status.perror("deregisterCommand");
 		return status;
 
 	}
