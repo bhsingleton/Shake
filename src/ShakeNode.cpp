@@ -333,7 +333,7 @@ Use this function to define any static attributes.
 
 	CHECK_MSTATUS(fnNumericAttr.setMin(0.0));
 	CHECK_MSTATUS(fnNumericAttr.setMax(1.0));
-	CHECK_MSTATUS(fnNumericAttr.setChannelBox(true));
+	CHECK_MSTATUS(fnNumericAttr.setKeyable(true));
 	CHECK_MSTATUS(fnNumericAttr.addToCategory(Shake::inputCategory));
 
 	// ".time" attribute
